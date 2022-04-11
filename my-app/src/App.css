@@ -1,0 +1,120 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+/* .App{
+  border: 1px solid black;
+  padding: 70px 35px 70px 35px ;
+  display: inline-block;
+  text-align: center;
+  margin: 300px 800px;
+
+} */
+
+
+/* .App{
+   padding-bottom: 300px;
+  background-color: #98AFC7;
+  margin-top: -90px;
+} */
+.login-form {
+  text-align: center;
+  padding: 2rem;
+  display: inline-block;
+  /* margin: -170px 750px ; */
+  margin: 250px 700px;
+  padding: 100px 100px 60px 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 0.1px solid gray;
+  background-color: #E3E4FA;
+}
+input[type="text"],
+input[type="password"],input[type="text"]
+
+{
+  height: 10px;
+  border: 1px solid black;
+  display: flex;
+  padding: 8px 7px;
+  margin: 10px;
+  padding-left: 70px;  
+
+}
+.submit{
+ padding: 2px 2px;
+ margin-left: 2px;
+ font-size: 17px;
+}
+.term{
+  font-size: small;
+  padding-top: 10px;
+  
+}
+.submit{
+  margin-left: 45px;
+  padding-left: 45px;
+  padding-right: -70px;
+  font-size: large;
+}
+.login{
+  margin-left: 5px;
+  background-color: gold;
+  padding: 5px 5px 5px 5px;
+}
+/* .account{
+  position: relative;
+  bottom: -345px;
+  left: 750px;
+  font-size: 20px;
+  padding: 3px 107px 3px 107px ;
+} */
+/* #tag{
+  position: relative;
+  bottom: -355px;
+  left: 750px;
+  color: black;
+  font-size: medium;
+} */
+
+/* .header__logo {
+  width: 130px;
+  height: 250px;
+  object-fit: contain;
+  margin: 50px 20px 0px 925px;
+  padding-top: 70px;
+}  */
