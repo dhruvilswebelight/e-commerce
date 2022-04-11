@@ -20,7 +20,7 @@ const App = () => {
 
       <header className="App-header">
       <LoginPage/>
-      {/* <Homepage/> */}
+      <Homepage/>
       </header>
     </div>
   );
