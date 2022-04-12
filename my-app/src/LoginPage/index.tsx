@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import logo from '../amazon-ar21.svg'
+import { useHistory } from 'react-router-dom'
 
 const LoginPage = () => {
+  const history = useHistory()
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -9,7 +11,8 @@ const LoginPage = () => {
 
   const validateForm = () => {
     if (username !== "" && email !== "" && password !== "") {
-      alert("Login successful");
+      // alert("Login successful");
+      history.push('/Home-Page');
     } else {
       alert("UserName or email or password must be required");
     }
@@ -20,7 +23,7 @@ const LoginPage = () => {
 
   return (
     <>
-      <img src={logo} alt="logo" />
+      <img src={logo} alt="logo" id="logo"/>
       <form className="login-form">
         <div>
           <h1>Login</h1>
@@ -68,6 +71,10 @@ const LoginPage = () => {
           and <a href="">Privacy Notice</a>
         </p>
       </form>
+
+      <p id="tag">----------------------------------New to Amazon?----------------------------------</p>
+      <button type="submit" className="account" >Create Your Amazon Account</button> 
+
     </>
   );
 };

@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Link, useParams, BrowserRouter } from 'react-router-dom';
+
 import LoginPage from './LoginPage';
 import Homepage from './HomePage';
 
@@ -9,18 +11,18 @@ import Homepage from './HomePage';
 const App = () => {
   return (
     <div className="App">  
-      {/* <img
-          className="header__logo"
-          src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
-          alt="amazon logo"
-        /> */}
-    
-      {/* <p id="tag">--------------------------------------New to Amazon?-------------------------------------</p>
-      <button type="submit" className="account" >Create Your Amazon Account</button> */}
-
       <header className="App-header">
+      <div>     
+        <Route exact path = "/Home-Page">
+        <Homepage />
+      </Route>
+      <Route path = "/Login-Page">
       <LoginPage/>
-      <Homepage/>
+      </Route>  
+  
+     
+    </div>
+  
       </header>
     </div>
   );

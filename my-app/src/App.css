@@ -1,65 +1,12 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-/* .App{
-  border: 1px solid black;
-  padding: 70px 35px 70px 35px ;
-  display: inline-block;
-  text-align: center;
-  margin: 300px 800px;
-
-} */
-
-
-/* .App{
-   padding-bottom: 300px;
-  background-color: #98AFC7;
-  margin-top: -90px;
-} */
 .login-form {
   text-align: center;
   padding: 2rem;
   display: inline-block;
-  /* margin: -170px 750px ; */
-  margin: 250px 700px;
-  padding: 100px 100px 60px 100px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin: 100px 500px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 2px;
+  padding-right: 2px;
   border: 0.1px solid gray;
   background-color: #E3E4FA;
 }
@@ -71,8 +18,10 @@ input[type="password"],input[type="text"]
   border: 1px solid black;
   display: flex;
   padding: 8px 7px;
-  margin: 10px;
-  padding-left: 70px;  
+  margin-left: 90px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  padding-right:50px;  
 
 }
 .submit{
@@ -83,38 +32,40 @@ input[type="password"],input[type="text"]
 .term{
   font-size: small;
   padding-top: 10px;
+  padding-left: 1px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  margin-bottom: 2px;
+  margin-right: -4px;
   
 }
 .submit{
   margin-left: 45px;
-  padding-left: 45px;
-  padding-right: -70px;
+  padding-left:38px;
+  padding-right: -100px;
   font-size: large;
 }
 .login{
-  margin-left: 5px;
+  margin-left: -9px;
   background-color: gold;
   padding: 5px 5px 5px 5px;
 }
-/* .account{
+.account{
   position: relative;
-  bottom: -345px;
-  left: 750px;
-  font-size: 20px;
-  padding: 3px 107px 3px 107px ;
-} */
-/* #tag{
+  bottom: 110px;
+  left: 500px;
+  font-size: 17px;
+  padding: 3px 110px 3px 110px ;
+}
+#tag{
   position: relative;
-  bottom: -355px;
-  left: 750px;
+  bottom: 95px;
+  left: 500px;
   color: black;
   font-size: medium;
-} */
+}
+#logo{
+ margin-left: 667px;
+ margin-bottom: -100px
+}
 
-/* .header__logo {
-  width: 130px;
-  height: 250px;
-  object-fit: contain;
-  margin: 50px 20px 0px 925px;
-  padding-top: 70px;
-}  */
