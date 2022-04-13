@@ -8,12 +8,20 @@ import Product from "./Product";
 
 const Homepage = () => {
     return (
-        <div className="header">
+        <>
+        <section className="header">
+            {/* <div className="header"> */}
+                <Header/>
+            {/* </div> */}
 
-        <Header/>
+        </section>
+        <section className="">
         <Product/>
 
-        </div>
+        </section>
+
+
+        </>
     )
 }
 export default Homepage
