@@ -1,8 +1,9 @@
+
 .login-form {
   text-align: center;
   padding: 2rem;
   display: inline-block;
-  margin: 100px 500px;
+  margin: 100px 700px;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 2px;
@@ -53,19 +54,19 @@ input[type="password"],input[type="text"]
 .account{
   position: relative;
   bottom: 110px;
-  left: 500px;
+  left: 700px;
   font-size: 17px;
   padding: 3px 110px 3px 110px ;
 }
 #tag{
   position: relative;
   bottom: 95px;
-  left: 500px;
+  left: 700px;
   color: black;
   font-size: medium;
 }
-#logo{
- margin-left: 667px;
+#amazon_logo{
+ margin-left: 860px;
  margin-bottom: -100px
 }
 
