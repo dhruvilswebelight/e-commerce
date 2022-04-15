@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Product = () => {
+  const history = useHistory();
   let data = [
     {
       title: "mi smart watch",
@@ -54,17 +56,19 @@ const Product = () => {
         <div className="home__row">
           {foundData.map((item: any) => {
             return (
-              <div key={item.image}>
+              <div
+                key={item.image}
+                onClick={() => history.push("/Product_Detail-page")}
+              >
                 <div className="products">
                   <div className="products__info">
                     <p>{item.title}</p>
                   </div>
 
                   <div>
-                    <img  src={item.img} alt="logo" id="watch" />
+                    <img src={item.img} alt="logo" id="watch" />
                   </div>
                 </div>
-                )
               </div>
             );
           })}

@@ -2,9 +2,16 @@ import React from "react";
 import Header from "./Header";
 import "../Header.css";
 import "./Product.css";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  useParams,
+  BrowserRouter,
+} from "react-router-dom";
 
 import Product from "./Product";
-import Productdetail from "./Productdetail";
+import ProductDetail from "./Productdetail";
 
 const Homepage = () => {
   return (
@@ -13,11 +20,13 @@ const Homepage = () => {
         <Header />
       </section>
       <section className="">
-        <Product />
+        <Route exact path={"/Home-Page"}>
+          <Product />
+        </Route>
+        <Route path="/Product_Detail-Page/:img">
+          <ProductDetail />
+        </Route>
       </section>
-      {/* <section className="">
-        <Productdetail/>
-      </section> */}
     </>
   );
 };

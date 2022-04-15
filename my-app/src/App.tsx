@@ -9,7 +9,7 @@ import {
 
 import LoginPage from "./LoginPage";
 import Homepage from "./HomePage";
-import Productdetail from "./HomePage/Productdetail";
+import ProductDetail from "./HomePage/Productdetail";
 
 const App = () => {
   return (
@@ -17,8 +17,8 @@ const App = () => {
         <Route exact path={"/Home-Page"}>
           <Homepage />
         </Route>
-        <Route path="/Product_detail-Page">
-          <Productdetail />
+        <Route path="/Product_Detail-Page">
+          <ProductDetail />
         </Route>
         <Route path="/Login-Page">
           <LoginPage />
