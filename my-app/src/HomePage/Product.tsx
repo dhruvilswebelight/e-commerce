@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import Header from "./Header";
 
 const Product = () => {
   const history = useHistory();
@@ -40,7 +41,12 @@ const Product = () => {
   };
 
   return (
-    <div className="home">
+    
+    <div>
+  
+      <div className="home">
+    
+    
       <input
         type="text"
         id="search_filter"
@@ -74,6 +80,7 @@ const Product = () => {
           })}
         </div>
       </div>
+    </div>
     </div>
   );
 };

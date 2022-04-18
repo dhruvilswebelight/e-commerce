@@ -1,7 +1,4 @@
 import React from "react";
-import Header from "./Header";
-import "../Header.css";
-import "./Product.css";
 import {
   BrowserRouter as Router,
   Route,
@@ -10,24 +7,44 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 
+import Header from "./Header";
 import Product from "./Product";
-import ProductDetail from "./Productdetail";
+import ProductDetail from "./productDetail";
+import LoginPage from "../LoginPage";
+import Crud from "./AddDelete";
+import "./Product.css";
+import "../Header.css";
+import "./AddDelete.css"
+
 
 const Homepage = () => {
   return (
-    <>
-      <section className="header">
+    <div className="App">
+    
+
+      <Route exact path="/">
+        <LoginPage />
+      </Route>
+      {/* <section className="header">
         <Header />
-      </section>
-      <section className="">
-        <Route exact path={"/Home-Page"}>
+      </section> */}
+    
+      <section>
+      
+        <Route exact path="/Home">
           <Product />
         </Route>
-        <Route path="/Product_Detail-Page/:img">
+
+        <Route path="/Product_Detail-Page">
           <ProductDetail />
         </Route>
+
+        <Route path="/Crud-Page">
+          <Crud />
+        </Route>
+       
       </section>
-    </>
+    </div>
   );
 };
 export default Homepage;

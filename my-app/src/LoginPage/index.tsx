@@ -12,7 +12,7 @@ const LoginPage = () => {
   const validateForm = () => {
     if (username !== "" && email !== "" && password !== "") {
       // alert("Login successful");
-      history.push("/Home-Page");
+      history.push("/Home");
     } else {
       alert("UserName or email or password must be required");
     }
