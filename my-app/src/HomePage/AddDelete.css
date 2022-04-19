@@ -1,17 +1,8 @@
-/* 
-  body {
-    margin: 50px;
-    color: #404040;
-    background: white;
-    font-size: 1rem;
-    background-color: azure;
-  } */
+
   table {
     margin: 1rem 0 1rem 0;
   }
-  
 
-  
   #h1,
   #h2
   {
@@ -31,6 +22,7 @@
     }
     #h2 {
       font-size: 2rem;
+      /* text-align: center; */
     }
 
   }
@@ -41,7 +33,6 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
 
   .flex-small,
   .flex-large {
@@ -68,7 +59,7 @@
     background: transparent;
     margin-bottom: 0.5rem;
     font-size: 1rem;
-    width: 87%;
+    width: 86%;
     max-width: 100%;
     line-height: 1;
   }
@@ -84,14 +75,16 @@
   }
    
   table {
-    border-collapse: collapse;
+    border-collapse: inherit;
     border-spacing: 0;
     width: 100%;
     max-width: 100%;
+    border: 1px solid black;
+    
   }
   
   thead th {
-    border-bottom: 2px solid #dedede;
+    border-bottom: 1px solid black;
   }
   
   tfoot th {
@@ -107,4 +100,4 @@
     text-align: left;
     padding: 0.5rem;
   }
-  
+

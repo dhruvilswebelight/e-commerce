@@ -58,11 +58,11 @@ const Crud = () => {
                 setEditing={setEditing}
                 currentProduct={currentProduct}
                 updateProduct={updateProduct}
-              />
+                />
             </div>
           ) : (
             <div>
-              <h2>Add Detail</h2>
+              <h2 id="h2">Add Detail</h2>
               <AddDetailForm addProduct={addProduct} />
             </div>
           )}
@@ -73,7 +73,7 @@ const Crud = () => {
             products={products}
             deleteProduct={deleteProduct}
             editRow={editRow}
-          />
+            />
         </div>
        
         <button onClick={()=>history.push("./Product_Detail-Page")}>back</button>

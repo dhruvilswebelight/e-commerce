@@ -5,8 +5,8 @@
   .header__logo {
     width: 100px;
     object-fit: contain;
-    margin: 0 10px;
-    margin-top: 16px;
+    margin: -40px 26px;
+    margin-top: 1px;
   }
   .header__searchInput{
       height: 12px;
@@ -17,8 +17,8 @@
   }
   .logout{
       float: right;
-      margin-right: -400px;
-      margin-top: -36px;
+      margin-right: -435px;
+      margin-top: 2px;
     padding: 3px 10px 3px 10px;
   }
   .header__nav_option {
@@ -27,7 +27,7 @@
     float: right;
     margin-left: 9px;
     margin-right: 180px;
-    margin-top: -29px;
+    margin-top: -1px;
     color: white;
   }
   .header__nav_option_line1 {
@@ -41,21 +41,20 @@
   #logo{
       float: right;
       margin-right: 600px;
-      margin-top: -42px;
+      margin-top: px;
       padding-top: 1px;
       padding-bottom: 1px;
 
       background-color:  darkgoldenrod;
   }
-  .header__nav_cart {
+  /* .header__nav_cart {
     float: right;
     color: white;
-    /* padding-top: -15px; */
     padding-right: 60px;
-    margin-top: -38px;
+    margin-top: -1px;
   
     
-  }
+  } */
 
   
 

@@ -30,6 +30,7 @@ const AddDetailForm = (props: any) => {
         className="text"
         type="text"
         name="title"
+        autoComplete="off"
         value={product.title}
         onChange={handleInputChange}
       />
@@ -38,6 +39,7 @@ const AddDetailForm = (props: any) => {
         className="text"
         type="text"
         name="price"
+        autoComplete="off"
         value={product.price}
         onChange={handleInputChange}
       />
@@ -46,6 +48,7 @@ const AddDetailForm = (props: any) => {
         className="text"
         type="text"
         name="status"
+        autoComplete="off"
         value={product.status}
         onChange={handleInputChange}
       />

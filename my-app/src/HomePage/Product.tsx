@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Header from "./Header";
+import logo from "../icons8-search.svg";
+import "../Header.css";
 
 const Product = () => {
   const history = useHistory();
@@ -41,47 +43,45 @@ const Product = () => {
   };
 
   return (
-    
-    <div>
-  
+    <>
+      <Header />
       <div className="home">
-    
-    
-      <input
-        type="text"
-        id="search_filter"
-        placeholder="Search"
-        value={title}
-        onChange={filter}
-      ></input>
-      <div className="home__container">
-        <img
-          src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
-          alt="background"
-        />
-        <div className="home__row">
-          {foundData.map((item: any) => {
-            return (
-              <div
-                key={item.image}
-                onClick={() => history.push("/Product_Detail-page")}
-              >
-                <div className="products">
-                  <div className="products__info">
-                    <p>{item.title}</p>
-                  </div>
+        <input
+          type="text"
+          id="search_filter"
+          placeholder="Search"
+          value={title}
+          onChange={filter}
+        ></input>
+        <img src={logo} alt="logo" id="logo" />
+        <div className="home__container">
+          <img
+            src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
+            alt="background"
+          />
+          <div className="home__row">
+            {foundData.map((item: any) => {
+              return (
+                <div
+                  key={item.image}
+                  onClick={() => history.push("/Product_Detail-page")}
+                >
+                  <div className="products">
+                    <div className="products__info">
+                      <p>{item.title}</p>
+                    </div>
 
-                  <div>
-                    <img src={item.img} alt="logo" id="watch" />
+                    <div>
+                      <img src={item.img} alt="logo" id="watch" />
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
-    </div>
+    </>
   );
 };
 export default Product;
