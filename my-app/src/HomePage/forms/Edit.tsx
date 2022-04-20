@@ -58,3 +58,5 @@ const EditDetailForm = (props: any) => {
 };
 
 export default EditDetailForm;
+
+

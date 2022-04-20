@@ -6,7 +6,6 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 
-// import Header from "./Header";
 import Product from "./Product";
 import ProductDetail from "./productDetail";
 import LoginPage from "../LoginPage";

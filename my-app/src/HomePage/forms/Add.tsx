@@ -59,3 +59,4 @@ const AddDetailForm = (props: any) => {
 };
 
 export default AddDetailForm;
+
