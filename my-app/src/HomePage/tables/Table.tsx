@@ -44,3 +44,6 @@ const DetailTable = (props: any) => (
 );
 
 export default DetailTable;
+
+
+

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const AddDetailForm = (props: any) => {
   const initialFormState = {
@@ -59,4 +59,6 @@ const AddDetailForm = (props: any) => {
 };
 
 export default AddDetailForm;
+
+
 

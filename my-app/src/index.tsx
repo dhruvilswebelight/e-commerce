@@ -4,10 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import store from "./HomePage/Redux/CounterSlice";
-import { Provider } from "react-redux";
-
-
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import Reducer from './HomePage/Redux/reducer';
+const store = createStore(Reducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <React.StrictMode>
