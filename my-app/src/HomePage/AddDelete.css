@@ -100,5 +100,55 @@
     text-align: left;
     padding: 0.5rem;
   } */
-                
-                             
+             
+  table {
+    border-collapse: inherit;
+    border-spacing: 0;
+    width: 50%;
+    max-width: 100%;
+    border: 1px solid black;
+    margin: 1rem 30rem;
+    
+  }
+  
+  thead th {
+    border-bottom: 1px solid black;
+  }
+  
+  tfoot th {
+    border-top: 2px solid #dedede;
+  }
+  
+  td {
+    border-bottom: 1px solid #dedede;
+  }
+  
+  th,
+  td {
+    text-align: left;
+    padding: 0.5rem;
+  }
+  .Crud_form{
+    display: table-caption;
+    margin: 1rem 54rem;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: larger;
+
+  }
+  #Add_Product{
+    margin: 10px 0px 0px 0px;
+  }
+  #product_detail{
+    font-size: larger;
+    margin: 1px 1px 12px 0px;
+    font-weight: bold;
+  }
+  .edit_crud{
+    display: table-caption;
+    margin: 1rem 54rem;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: larger;
+
+  }                         
