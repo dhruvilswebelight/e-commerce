@@ -8,7 +8,7 @@ import {
   deleteProduct
 } from "./action";
 import { connect } from "react-redux";
-
+import "./Crud.css"
 class Crud extends Component {
     
   constructor(props) {
@@ -145,11 +145,11 @@ class Crud extends Component {
             />
             <br />
             {this.state.id ? (
-              <button onClick={this.submitData}>UPDATE</button>
+              <button  id="UpdateAdd-crud" onClick={this.submitData}>UPDATE</button>
             ) : (
-              <button onClick={this.submitData}>ADD</button>
+              <button id="UpdateAdd-crud" onClick={this.submitData}>ADD</button>
             )}{" "}
-            <button onClick={this.clearData}>CLEAR</button>
+            <button id="clear-crud" onClick={this.clearData}>CLEAR</button>
           </div>
           <div className="rightsection">
             <table>
