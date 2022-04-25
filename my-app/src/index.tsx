@@ -5,7 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux'
-import store from "./HomePage/Redux/ProductSlice";
+import thunk from "redux-thunk";
+import { createStore, applyMiddleware } from "redux";
+import Reducer from './HomePage/Redux/reducer';
+
+const store = createStore(Reducer, applyMiddleware(thunk));
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
