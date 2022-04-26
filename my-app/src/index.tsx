@@ -8,8 +8,10 @@ import { Provider } from 'react-redux'
 import thunk from "redux-thunk";
 import { createStore, applyMiddleware } from "redux";
 import Reducer from './HomePage/Redux/reducer';
+// import { ProductSlice } from './HomePage/Redux/productSlice';
 
 const store = createStore(Reducer, applyMiddleware(thunk));
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
