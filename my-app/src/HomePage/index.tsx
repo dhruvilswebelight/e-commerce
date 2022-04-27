@@ -9,7 +9,8 @@ import {
 import Product from "./Product";
 import ProductDetail from "./productDetail";
 import LoginPage from "../LoginPage";
-import Crud from "./Redux/Crud";
+import Crud from './Redux/Crud';
+// import {Crud} from "./Redux/Crud";
 import "./Product.css";
 import "../Header.css";
 import "./AddDelete.css";

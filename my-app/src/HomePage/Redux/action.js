@@ -33,7 +33,7 @@
 //   };
 // }
 
-export function getProduct() {
+export const getProduct = () =>{
   return (dispatch) => {
     return dispatch({
       type: "GET_PRODUCT",
@@ -41,7 +41,7 @@ export function getProduct() {
   };
 }
 
-export function addProduct(data) {
+export const addProduct = (data)  => {
   return (dispatch) => {
     return dispatch({
       type: "ADD_PRODUCT",
@@ -50,7 +50,7 @@ export function addProduct(data) {
   };
 }
 
-export function editProduct(data) {
+export const editProduct = (data) =>{
   return (dispatch) => {
     return dispatch({
       type: "EDIT_PRODUCT",
@@ -59,7 +59,7 @@ export function editProduct(data) {
   };
 }
 
-export function deleteProduct(productId) {
+export const deleteProduct = (productId) =>{
   return (dispatch) => {
     return dispatch({
       type: "DELETE_PRODUCT",

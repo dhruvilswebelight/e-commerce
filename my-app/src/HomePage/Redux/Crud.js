@@ -1,3 +1,5 @@
+                             // redux Crud
+
 // import { Component } from "react";
 // import PropTypes from "prop-types";
 // import { getProduct, addProduct, editProduct, deleteProduct } from "./action";
@@ -197,37 +199,49 @@
 //   editProduct,
 //   deleteProduct,
 // })(Crud);
+
+
 import { Link } from "react-router-dom";
-import { Component } from "react";
-import PropTypes from "prop-types";
-import { getProduct, addProduct, editProduct, deleteProduct } from "./action";
-// import { getProduct,addProduct, editProduct,deleteProduct} from "./productSlice";
+import { Component, useState } from "react";
+// import PropTypes from "prop-types";
+// import { getProduct, addProduct, editProduct, deleteProduct } from "./action";
+import { getProduct,addProduct, editProduct,deleteProduct} from "./productSlice";
+import { useDispatch,useSelector } from "react-redux";
+
 import { connect } from "react-redux";
 import "./Crud.css";
-class Crud extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      id: 0,
-      title: "",
-      price: "",
-      status: "",
-    };
+
+
+const Crud =() => {
+ 
+    const [product,setProduct]= useState("")
+  
+
+
+  // static propTypes = {
+  //   products: PropTypes.array.isRequired,
+  //   getProduct: PropTypes.func.isRequired,
+  //   addProduct: PropTypes.func.isRequired,
+  //   editProduct: PropTypes.func.isRequired,
+  //   deleteProduct: PropTypes.func.isRequired,
+  // };
+
+  const componentDidMount = ()=>  
+  {
+    console.log("get data");
+    // console.log(this.getValue);
+    // this.props.getProduct()
+
+  
+    
   }
 
-  static propTypes = {
-    products: PropTypes.array.isRequired,
-    getProduct: PropTypes.func.isRequired,
-    addProduct: PropTypes.func.isRequired,
-    editProduct: PropTypes.func.isRequired,
-    deleteProduct: PropTypes.func.isRequired,
-  };
+  // test = (getValue) =>{
+  //    getValue = useSelector((state) =>state.products.getValue);
+  // }
+   
 
-  componentDidMount() {
-    this.props.getProduct();
-  }
-
-  submitData = () => {
+  const submitData = () => {
     if (
       this.state.title &&
       this.state.price &&
@@ -263,7 +277,7 @@ class Crud extends Component {
     this.clearData();
   };
 
-  editDetails = (data) => {
+  const editDetails = (data) => {
     this.setState({
       id: data.id,
       title: data.title,
@@ -272,31 +286,32 @@ class Crud extends Component {
     });
   };
 
-  deleteProduct = (id) => {
+const   deleteProduct = (id) => {
     this.clearData();
     {
       this.props.deleteProduct(id);
     }
   };
 
-  handleTitleChange = (e) => {
+ const  handleTitleChange = (e) => {
     this.setState({
       title: e.target.value,
     });
   };
 
-  handlePriceChange = (e) => {
+ const  handlePriceChange = (e) => {
     this.setState({
       price: e.target.value,
     });
   };
-  handleStatusChange = (e) => {
+  const  handleStatusChange = (e) => {
+  
     this.setState({
       status: e.target.value,
     });
   };
 
-  clearData = () => {
+ const  clearData = () => {
     this.setState({
       id: 0,
       title: "",
@@ -305,7 +320,8 @@ class Crud extends Component {
     });
   };
 
-  render() {
+  
+    // console.log(this.test)
     return (
       <div className="App">
         <header className="App-header">
@@ -372,10 +388,10 @@ class Crud extends Component {
                         <td>{data.status}</td>
 
                         <td>
-                          <button onClick={() => this.editDetails(data)}>
+                          <button onClick={this.editDetails(data)}>
                             EDIT
                           </button>{" "}
-                          <button onClick={() => this.deleteProduct(data.id)}>
+                          <button onClick={this.deleteProduct(data.id)}>
                             DELETE
                           </button>{" "}
                         </td>
@@ -388,16 +404,18 @@ class Crud extends Component {
         </p>
       </div>
     );
-  }
+  
 }
 
-const mapStateToProps = (state) => ({
-  products: state.products,
-});
+// const mapStateToProps = (state) => ({
+//   products: state.products,
+// });
 
-export default connect(mapStateToProps, {
-  getProduct,
-  addProduct,
-  editProduct,
-  deleteProduct,
-})(Crud);
+// const mapDispatchToProps = (dispatch) => ({
+//   getProducts: () => dispatch (getProduct())
+// })
+
+// export default connect(mapStateToProps, mapDispatchToProps)(Crud);
+
+export default Crud;
+
