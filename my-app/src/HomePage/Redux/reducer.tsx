@@ -1,4 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
+
+                                    // redux-toolkit
+
 const initialstate = {
   products: [
     { id: 1, title: "mi smart watch", price: "800", status: "In stock" },
@@ -8,25 +10,18 @@ const initialstate = {
   ],
 };
 
-const ProductSlice = createSlice({
-  name: "product",
-  initialstate,
-  reducers: {
-    getProduct: (state) => {
-      console.log("get product");
+const Reducer = (state = initialstate, action:any) => {
+  switch (action.type) {
+    case "GET_PRODUCT":
       return {
         ...state,
       };
-    },
-
-    addProduct: (state, action) => {
+    case "ADD_PRODUCT":
       return {
         ...state,
         products: state.products.concat(action.payload),
       };
-    },
-
-    editProduct: (state, action) => {
+    case "EDIT_PRODUCT":
       return {
         ...state,
         products: state.products.map((product) =>
@@ -40,19 +35,16 @@ const ProductSlice = createSlice({
             : product
         ),
       };
-    },
-
-    deleteProduct: (state, action) => {
+    case "DELETE_PRODUCT":
       return {
         ...state,
         products: state.products.filter(
           (product) => product.id !== action.payload
         ),
       };
-    },
-  },
-});
+    default:
+      return state;
+  }
+};
 
-export const { getProduct, addProduct, editProduct, deleteProduct } =
-  ProductSlice.actions;
-export default ProductSlice.reducer;
+export default Reducer;

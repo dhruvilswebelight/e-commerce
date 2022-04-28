@@ -4,18 +4,20 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import thunk from "redux-thunk";
 import Reducer from './HomePage/Redux/reducer';
-// import ProductSlice from "./HomePage/Redux/productSlice";
 import { configureStore } from "@reduxjs/toolkit";
-import "./index.css";
+import thunk from "redux-thunk";
 import logger from "redux-logger";
+import "./index.css";
 
+import store from "./reduxToolkit/store";
+import { fetchProducts } from "./reduxToolkit/features/productsSlice";
+store.dispatch(fetchProducts());
 
-const store = configureStore({
-  reducer:Reducer,
-  middleware: [thunk,logger],
-});
+// const store = configureStore({
+//   reducer:Reducer,
+//   middleware: [thunk,logger],
+// });
 
 ReactDOM.render(
   <React.StrictMode>

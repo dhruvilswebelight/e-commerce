@@ -31,5 +31,8 @@ table {
   .App-header{
       text-align: center;
   }
+  #redux_crud_back_button{
+    margin: 0rem 57rem;
+    }
 
  
