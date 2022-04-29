@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { Link } from "react-router-dom";
 
-export function ProductList() {
+const ProductList = () => {
   const dispatch = useDispatch();
 
   const { entities } = useSelector((state: any) => state.products);
-  const loading = useSelector((state: any) => state.loading);
+  // const loading = useSelector((state: any) => state.loading);
 
   const handleDelete = (id: any) => {
     dispatch(productDeleted({ id }));
@@ -16,7 +16,7 @@ export function ProductList() {
   return (
     <div>
       <div>
-        <h1 id="toolkit_header">Add Products Details</h1>
+        <h1 id="toolkit_header">Add Product Details</h1>
       </div>
       <div>
         <Link to="/add-product">
@@ -24,43 +24,40 @@ export function ProductList() {
         </Link>
       </div>
       <div className="toolkit_table">
-        {loading ? (
-          "Loading..."
-        ) : (
-          <table className="u-full-width">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Price</th>
-                <th>Status</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {entities.length &&
-                entities.map(({ id, title, price, status }: any, i: any) => (
-                  <tr key={i}>
-                    <td>{id}</td>
-                    <td>{title}</td>
-                    <td>{price}</td>
-                    <td>{status}</td>
+        <table className="u-full-width">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {entities.length &&
+              entities.map(({ id, title, price, status }: any, i: any) => (
+                <tr key={i}>
+                  <td>{id}</td>
+                  <td>{title}</td>
+                  <td>{price}</td>
+                  <td>{status}</td>
 
-                    <td>
-                      <button onClick={() => handleDelete(id)}>Delete</button>
-                      <Link to={`/edit-product/${id}`}>
-                        <button>Edit</button>
-                      </Link>
-                    </td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
-        )}
+                  <td>
+                    <button onClick={() => handleDelete(id)}>Delete</button>
+                    <Link to={`/edit-product/${id}`}>
+                      <button>Edit</button>
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
       </div>
       <Link to="/Product_Detail-page">
-        <button  id="toolkit_add_edit_back_button" >back</button>
+        <button id="toolkit_add_edit_back_button">back</button>
       </Link>
     </div>
   );
-}
+};
+export default ProductList;

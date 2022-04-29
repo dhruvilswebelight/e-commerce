@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import { productAdded } from "./productsSlice";
 
-export function AddProduct() {
+const AddProduct = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -68,4 +68,5 @@ export function AddProduct() {
       </div>
     </div>
   );
-}
+};
+export default AddProduct;

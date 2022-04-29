@@ -50,14 +50,15 @@ const productsSlice = createSlice({
 
   extraReducers: {
     [fetchProducts.pending.toString()]: (state: any) => {
-      state.loading = true;
+      state = true;
     },
     [fetchProducts.fulfilled.toString()]: (state: any, action: any) => {
-      state.loading = false;
+      state = false;
+
       state.entities = [...state.entities, ...action.payload];
     },
     [fetchProducts.rejected.toString()]: (state: any) => {
-      state.loading = false;
+      state = false;
     },
   },
 });

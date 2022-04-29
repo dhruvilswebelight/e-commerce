@@ -4,7 +4,7 @@ import { useHistory, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { productUpdated } from "./productsSlice";
 
-export function EditProduct() {
+const EditProduct = () => {
   const { pathname } = useLocation();
   const productId = parseInt(pathname.replace("/edit-product/", ""));
 
@@ -68,4 +68,5 @@ export function EditProduct() {
       </div>
     </div>
   );
-}
+};
+export default EditProduct;

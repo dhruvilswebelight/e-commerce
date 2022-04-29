@@ -19,6 +19,9 @@ store.dispatch(fetchProducts());
 //   middleware: [thunk,logger],
 // });
 
+
+
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
