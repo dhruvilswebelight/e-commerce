@@ -1,5 +1,5 @@
 
-                                    // redux-toolkit
+                                 
 
 const initialstate = {
   products: [
