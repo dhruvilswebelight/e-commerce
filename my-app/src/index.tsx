@@ -5,12 +5,12 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 // import Reducer from './HomePage/Redux/reducer';
-// import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import thunk from "redux-thunk";
 import logger from "redux-logger";
 import "./index.css";
-import store from "./Redux/store"
-// import store from "./reduxToolkit/store";
+// import store from "./Redux/store"
+import store from "./reduxToolkit/store";
 // import { fetchProducts } from "./reduxToolkit/features/productsSlice";
 // store.dispatch(fetchProducts());
 

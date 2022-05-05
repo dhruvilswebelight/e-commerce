@@ -3,7 +3,7 @@ import {
     GET_PRODUCT,
     UPDATE_PRODUCT,
     DELETE_PRODUCT
-  } from "../constent/Types";
+  } from "../constant/Types";
   
   export const addProduct = (product:any) => ({
     type: CREATE_PRODUCT,

@@ -2,15 +2,12 @@ import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { deleteProduct } from "../actions/productAction";
 import { useDispatch } from "react-redux";
-
 const  Table = ()=> {
   const products = useSelector((state:any) => state.product.products);
   console.log(products);
-
   const dispatch = useDispatch();
   return (
     <div>
-      
       <table >
         <thead>
           <tr>
@@ -46,3 +43,4 @@ const  Table = ()=> {
   );
 }
 export default Table
+

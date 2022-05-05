@@ -1,23 +1,18 @@
-import { type } from "os";
 import {
     CREATE_PRODUCT,
     GET_PRODUCT,
     UPDATE_PRODUCT,
     DELETE_PRODUCT
-  } from "../constent/Types";
+  } from "../constant/Types";
   
   type Inputs = {
-    id: number;
+    id: string;
     title: string;
     price: string;
     status: string;
   };
-//   let arr: {
-//     id: number;
-//     title: string;
-//     price: string;
-//     status: string;
-// }[]
+
+
   const initialState = {
     products: [
       { id: 1, title: "mi smart watch", price: "800", status: "In stock" },
@@ -40,9 +35,9 @@ import {
         let arr = state.products.filter(
           (product) => product.id == action.payload
         );
-        // arr = arr.values();
+          // arr = arr.values();
         for (let val of arr) {
-        //  arr = val;
+              // arr = val;
         }
         return {
           ...state,
