@@ -14,11 +14,12 @@ import LoginPage from "../LoginPage";
 import AddProduct  from "../reduxToolkit/features/AddProduct";
 import  EditProduct  from "../reduxToolkit/features/EditProduct";
 import  ProductList  from "../reduxToolkit/features/ProductListTable";
+
 import "../reduxToolkit/features/location.css";
 import "./Product.css";
 import "../Header.css";
 import "./AddDelete.css";
-import Navbar from "../Redux/Components/Navbar";
+// import Navbar from "../Redux/Components/Navbar";
 // import Nav from "../Redux/Components/Nav";
 const Homepage = () => {
   return (
@@ -35,6 +36,10 @@ const Homepage = () => {
         <ProductDetail />
       </Route>
 
+    
+      
+
+     
       {/* <Route path="/Crud-Page">
         <Navbar />
       </Route> */}

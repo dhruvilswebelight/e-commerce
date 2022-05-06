@@ -10,9 +10,14 @@ import thunk from "redux-thunk";
 import logger from "redux-logger";
 import "./index.css";
 // import store from "./Redux/store"
+
+
+// import store from "./HomePage/redux/store";
+
+
 import store from "./reduxToolkit/store";
-// import { fetchProducts } from "./reduxToolkit/features/productsSlice";
-// store.dispatch(fetchProducts());
+import { fetchProducts } from "./reduxToolkit/features/productsSlice";
+store.dispatch(fetchProducts());
 
 
 

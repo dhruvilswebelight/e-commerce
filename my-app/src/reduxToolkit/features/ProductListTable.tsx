@@ -1,5 +1,6 @@
 import { fetchProducts, productDeleted } from "./productsSlice";
 import { useDispatch, useSelector } from "react-redux";
+import moment from 'moment'
 
 import { Link } from "react-router-dom";
 var objects = [{ 'x': 4 }, { 'x': 5 }];
@@ -56,6 +57,9 @@ const ProductList = () => {
       </div>
       <Link to="/Product_Detail-page">
         <button id="toolkit_add_edit_back_button">back</button>
+      </Link>
+      <Link to="/moment-lodash-page">
+        <button id="toolkit_add_edit_back_button">Next</button>
       </Link>
     </div>
   );
