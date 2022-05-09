@@ -25,7 +25,7 @@ const productsSlice = createSlice({
       state.entities.push(action.payload);
     },
     productUpdated(state: any, action: any) {
-      const { id, title, price, status } = action.payload;
+      const { id, title, price, status} = action.payload;
       const existingProduct = state.entities.find(
         (product: any) => product.id === id
       );

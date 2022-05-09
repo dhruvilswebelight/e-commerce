@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useLocation } from "react-router-dom";
+import moment from "moment";
+
 
 import { useState } from "react";
 import { productUpdated } from "./productsSlice";
@@ -18,12 +20,22 @@ const EditProduct = () => {
   const [title, setTitle] = useState(product.title);
   const [price, setPrice] = useState(product.price);
   const [status, setStatus] = useState(product.status);
+  // const [edit, setEdit] = useState(product.LastEdited);
+
 
   const [error, setError] = useState(null);
 
   const handleTitle = (e: any) => setTitle(e.target.value);
   const handlePrice = (e: any) => setPrice(e.target.value);
   const handleStatus = (e: any) => setStatus(e.target.value);
+  // const handleLastEdited = (e: any) => setEdit(e.target.value);
+
+
+  const handleMoment = (title: any) => {
+  
+    console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
+
+  };
 
   const handleClick = () => {
     if (title && price && status) {
@@ -32,7 +44,8 @@ const EditProduct = () => {
           id: productId,
           title,
           price,
-          status,
+          status
+        
         })
       );
 
@@ -41,6 +54,7 @@ const EditProduct = () => {
     } else {
       alert("Fill in all fields");
     }
+
   };
 
   return (
@@ -62,9 +76,9 @@ const EditProduct = () => {
         </label>
         <input id="q" type="text" onChange={handleStatus} value={status} />
         {error && error}
-        <button onClick={handleClick} id="toolkit_add_edit_product_button">
+        <button onClick={handleClick}  onChange={handleMoment} id="toolkit_add_edit_product_button">
           Save product
-        </button>
+        </button >
       </div>
     </div>
   );
