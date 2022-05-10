@@ -11,9 +11,9 @@ import Product from "./Product";
 import ProductDetail from "./productDetail";
 import LoginPage from "../LoginPage";
 // import Crud from "./Redux/Crud";
-import AddProduct  from "../reduxToolkit/features/AddProduct";
-import  EditProduct  from "../reduxToolkit/features/EditProduct";
-import  ProductList  from "../reduxToolkit/features/ProductListTable";
+import AddProduct from "../reduxToolkit/features/AddProduct";
+import EditProduct from "../reduxToolkit/features/EditProduct";
+import ProductList from "../reduxToolkit/features/ProductListTable";
 
 import "../reduxToolkit/features/location.css";
 import "./Product.css";
@@ -36,10 +36,6 @@ const Homepage = () => {
         <ProductDetail />
       </Route>
 
-    
-      
-
-     
       {/* <Route path="/Crud-Page">
         <Navbar />
       </Route> */}

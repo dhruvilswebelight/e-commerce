@@ -1,36 +1,14 @@
 import { productDeleted } from "./productsSlice";
 import { useDispatch, useSelector } from "react-redux";
-import moment from "moment";
-import { useState } from "react";
-import { productUpdated } from "./productsSlice";
 
 import { Link } from "react-router-dom";
 const ProductList = () => {
   const dispatch = useDispatch();
-  const [edit, setEdit] = useState(moment().format("MMMM Do YYYY, h:mm:ss a"));
-  // const handleEdit = (e: any) => setEdit(e.target.value);
 
   const { entities } = useSelector((state: any) => state.products);
   const handleDelete = (id: any) => {
     dispatch(productDeleted({ id }));
   };
-
-
-  const handleMoment = () => {
-    console.log(moment().format("MMMM Do YYYY, h:mm:ss a"));
-  };
-  
-  // const handleClick = () => {
-  //   if (edit) {
-  //     dispatch(
-  //       productUpdated({
-  //       edit
-
-  //       })
-  //     );
-
-  // }
-  // };
 
   return (
     <div>
@@ -50,30 +28,24 @@ const ProductList = () => {
               <th>Title</th>
               <th>Price</th>
               <th>Status</th>
-              <th>Last Edited</th>
+              <th>Last Edited / Added</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             {entities.length &&
               entities.map(
-                ({ id, title, price, status }: any, i: any) => (
+                ({ id, title, price, status, edit }: any, i: any) => (
                   <tr key={i}>
                     <td>{id}</td>
                     <td>{title}</td>
                     <td>{price}</td>
                     <td>{status}</td>
-                    <td>{(moment().format("MMMM Do YYYY, h:mm:ss a"))}</td>
+                    <td>{edit}</td>
                     <td>
                       <button onClick={() => handleDelete(id)}>Delete</button>
                       <Link to={`/edit-product/${id}`}>
-                        {/* <button onClick={() => handleMoment(title)}>Edit</button> */}
-                        <button
-                          // onClick={()=> handleEdit(handleMoment)}
-                          // onChange={handleEdit}
-                        >
-                          Edit
-                        </button>
+                        <button>Edit</button>
                       </Link>
                     </td>
                   </tr>

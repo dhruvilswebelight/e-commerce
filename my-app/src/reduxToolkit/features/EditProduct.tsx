@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useLocation } from "react-router-dom";
 import moment from "moment";
 
-
 import { useState } from "react";
 import { productUpdated } from "./productsSlice";
 
@@ -20,32 +19,24 @@ const EditProduct = () => {
   const [title, setTitle] = useState(product.title);
   const [price, setPrice] = useState(product.price);
   const [status, setStatus] = useState(product.status);
-  // const [edit, setEdit] = useState(product.LastEdited);
-
+  const [edit, setEdit] = useState(product.edit);
 
   const [error, setError] = useState(null);
 
   const handleTitle = (e: any) => setTitle(e.target.value);
   const handlePrice = (e: any) => setPrice(e.target.value);
   const handleStatus = (e: any) => setStatus(e.target.value);
-  // const handleLastEdited = (e: any) => setEdit(e.target.value);
-
-
-  const handleMoment = (title: any) => {
-  
-    console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
-
-  };
+  const handleEdit = (e: any) => setEdit(e.target.value);
 
   const handleClick = () => {
-    if (title && price && status) {
+    if (title && price && status && edit) {
       dispatch(
         productUpdated({
           id: productId,
           title,
           price,
-          status
-        
+          status,
+          edit: moment().format("MMMM Do YYYY, h:mm:ss a"),
         })
       );
 
@@ -54,7 +45,6 @@ const EditProduct = () => {
     } else {
       alert("Fill in all fields");
     }
-
   };
 
   return (
@@ -75,10 +65,19 @@ const EditProduct = () => {
           Status
         </label>
         <input id="q" type="text" onChange={handleStatus} value={status} />
+
+        <label id="lastEdit">Last Edited</label>
+        <label id="time" onChange={handleEdit}>
+          {moment().format("MMMM Do YYYY, h:mm:ss a")}
+        </label>
         {error && error}
-        <button onClick={handleClick}  onChange={handleMoment} id="toolkit_add_edit_product_button">
+        <button
+          onClick={handleClick}
+          value={edit}
+          id="toolkit_add_edit_product_button"
+        >
           Save product
-        </button >
+        </button>
       </div>
     </div>
   );

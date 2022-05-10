@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import moment from "moment";
 
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
@@ -13,10 +14,34 @@ const productsSlice = createSlice({
   name: "products",
   initialState: {
     entities: [
-      { id: 1, title: "mi smart watch", price: "800", status: "In stock" },
-      { id: 2, title: "speaker", price: "1500", status: "In stock" },
-      { id: 3, title: "i-pad", price: "30000", status: "In stock" },
-      { id: 4, title: "Samsung tv", price: "56000", status: "In stock" },
+      {
+        id: 1,
+        title: "mi smart watch",
+        price: "800",
+        status: "In stock",
+        edit: moment().format("MMMM Do YYYY, h:mm:ss a"),
+      },
+      {
+        id: 2,
+        title: "speaker",
+        price: "1500",
+        status: "In stock",
+        edit: moment().format("MMMM Do YYYY, h:mm:ss a"),
+      },
+      {
+        id: 3,
+        title: "i-pad",
+        price: "30000",
+        status: "In stock",
+        edit: moment().format("MMMM Do YYYY, h:mm:ss a"),
+      },
+      {
+        id: 4,
+        title: "Samsung tv",
+        price: "56000",
+        status: "In stock",
+        edit: moment().format("MMMM Do YYYY, h:mm:ss a"),
+      },
     ],
     // loading: false,
   },
@@ -25,7 +50,7 @@ const productsSlice = createSlice({
       state.entities.push(action.payload);
     },
     productUpdated(state: any, action: any) {
-      const { id, title, price, status} = action.payload;
+      const { id, title, price, status, edit } = action.payload;
       const existingProduct = state.entities.find(
         (product: any) => product.id === id
       );
@@ -33,6 +58,7 @@ const productsSlice = createSlice({
         existingProduct.title = title;
         existingProduct.price = price;
         existingProduct.status = status;
+        existingProduct.edit = edit;
       }
     },
     productDeleted(state, action) {

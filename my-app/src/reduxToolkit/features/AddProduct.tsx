@@ -1,4 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
+import moment from "moment";
+
 
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
@@ -11,24 +13,29 @@ const AddProduct = () => {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
   const [status, setStatus] = useState("");
+  const [edit, setEdit] = useState(moment().format("MMMM Do YYYY, h:mm:ss a"));
+
   const [error, setError] = useState(null);
 
   const handleTitle = (e: any) => setTitle(e.target.value);
   const handlePrice = (e: any) => setPrice(e.target.value);
   const handleStatus = (e: any) => setStatus(e.target.value);
+  const handleEdit = (e: any) => setEdit(e.target.value);
+
 
   const productsAmount = useSelector(
     (state: any) => state.products.entities.length
   );
 
   const handleClick = () => {
-    if (title && price && status) {
+    if (title && price && status ) {
       dispatch(
         productAdded({
           id: productsAmount + 1,
           title,
           price,
           status,
+          edit:moment().format("MMMM Do YYYY, h:mm:ss a")
         })
       );
 
@@ -41,6 +48,7 @@ const AddProduct = () => {
     setTitle("");
     setPrice("");
     setStatus("");
+    setEdit(moment().format("MMMM Do YYYY, h:mm:ss a"));
   };
 
   return (
@@ -61,6 +69,10 @@ const AddProduct = () => {
           Status
         </label>
         <input type="text" id="q" onChange={handleStatus} value={status} />
+        <label id="lastEdit">Last Added</label>
+        <label id="time" onChange={handleEdit}>
+          {moment().format("MMMM Do YYYY, h:mm:ss a")}
+        </label>
         {error && error}
         <button onClick={handleClick} id="toolkit_add_edit_product_button">
           Add product
