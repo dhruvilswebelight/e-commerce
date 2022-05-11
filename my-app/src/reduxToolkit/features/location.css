@@ -1,57 +1,59 @@
-#toolkit_header{
-    text-align: center;
+#toolkit_header {
+  text-align: center;
 }
-.toolkit_table{
-    margin-top: 3rem;
+.toolkit_table {
+  margin-top: 3rem;
 }
-.toolkit_crud_add_product{
-    margin-left: 56rem;
-    margin-top: 2rem;
-    max-height: 100%;
-    height: 25px;
+.toolkit_crud_add_product {
+  margin-left: 56rem;
+  margin-top: 2rem;
+  max-height: 100%;
+  height: 25px;
 }
-.toolkit_add_edit_product_detail{
-    margin: 3rem 47rem 4rem 45rem;
+.toolkit_add_edit_product_detail {
+  margin: 3rem 47rem 4rem 45rem;
 }
-#toolkit_add_edit_title{
-    margin: 14rem;
-    line-height: 2;
+#toolkit_add_edit_title {
+  margin: 14rem;
+  line-height: 2;
 }
-#toolkit_add_edit_price{
-    margin: 1rem 1rem 1rem 13.9rem;
+#toolkit_add_edit_price {
+  margin: 1rem 1rem 1rem 13.9rem;
 }
-#toolkit_add_edit_status{
-    margin: 1rem 1rem 1rem 13.7rem;
+#toolkit_add_edit_status {
+  margin: 1rem 1rem 1rem 13.7rem;
 }
-#q{ max-width: 100%;
-max-height: 100%;
-height: 15px;
-width: 55%;
-border: 1px solid black;
-margin: 1rem 6rem 1rem 5.5rem; 
+#q {
+  max-width: 100%;
+  max-height: 100%;
+  height: 15px;
+  width: 55%;
+  border: 1px solid black;
+  margin: 1rem 6rem 1rem 5.5rem;
 }
-#toolkit_add_edit_product_button{
-    margin: 1.5rem 0rem 0rem 12.5rem;
+#toolkit_add_edit_product_button {
+  margin: 1.5rem 0rem 0rem 12.5rem;
 }
-#toolkit_add_edit_product_header{
-    text-align: center;
-    margin: 2rem 1rem 0rem 2rem
+#toolkit_add_edit_product_header {
+  text-align: center;
+  margin: 2rem 1rem 0rem 2rem;
 }
-#toolkit_add_edit_back_button{
-    margin: 1rem 57rem;
+#toolkit_add_edit_back_button {
+  margin: 1rem 57rem;
 }
-td,th{
-    border: 1px solid black;
+td,
+th {
+  border: 1px solid black;
 }
-#time{
-    margin: 1rem 2rem 1rem 5.5rem;
-    border: 1px solid black;
-    padding: 6px 61px 6px 61px;
-    line-height: 2;
+#time {
+  margin: 1rem 2rem 1rem 5.5rem;
+  border: 1px solid black;
+  padding: 6px 61px 6px 61px;
+  line-height: 2;
 }
-#lastEdit{
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    margin: 1.1rem 10rem 1rem 12.6rem;
+#lastEdit {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 1.1rem 10rem 1rem 12.6rem;
 }

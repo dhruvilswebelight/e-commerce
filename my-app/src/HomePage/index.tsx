@@ -17,7 +17,7 @@ import ProductList from "../reduxToolkit/features/ProductListTable";
 
 import "../reduxToolkit/features/location.css";
 import "./Product.css";
-import "../Header.css";
+import "./Header.css";
 import "./AddDelete.css";
 // import Navbar from "../Redux/Components/Navbar";
 // import Nav from "../Redux/Components/Nav";

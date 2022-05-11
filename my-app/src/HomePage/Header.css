@@ -1,0 +1,57 @@
+.header {
+  background-color: #131921;
+  height: 65px;
+}
+.header__logo {
+  width: 100px;
+  object-fit: contain;
+  margin: -40px 26px;
+  margin-top: 1px;
+}
+.header__searchInput {
+  height: 12px;
+  padding: 10px;
+  width: 60%;
+  margin-right: 100px;
+  margin-top: -45px;
+}
+.logout {
+  float: right;
+  margin-right: -435px;
+  margin-top: 2px;
+  padding: 3px 10px 3px 10px;
+}
+.header__nav_option {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin-left: 9px;
+  margin-right: 180px;
+  margin-top: -1px;
+  color: white;
+}
+.header__nav_option_line1 {
+  font-size: 12px;
+}
+
+.header__nav_option_line2 {
+  font-size: 15px;
+  font-weight: 800;
+}
+#logo {
+  float: right;
+  margin-right: 600px;
+  margin-top: px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+
+  background-color: darkgoldenrod;
+}
+/* .header__nav_cart {
+    float: right;
+    color: white;
+    padding-right: 60px;
+    margin-top: -1px;
+  
+    
+  } */

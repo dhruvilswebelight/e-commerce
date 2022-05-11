@@ -1,4 +1,3 @@
-
 .login-form {
   text-align: center;
   padding: 2rem;
@@ -9,12 +8,11 @@
   padding-left: 2px;
   padding-right: 2px;
   border: 0.1px solid gray;
-  background-color: #E3E4FA;
+  background-color: #e3e4fa;
 }
 input[type="text"],
-input[type="password"],input[type="text"]
-
-{
+input[type="password"],
+input[type="text"] {
   height: 10px;
   border: 1px solid black;
   display: flex;
@@ -22,15 +20,14 @@ input[type="password"],input[type="text"]
   margin-left: 90px;
   margin-bottom: 15px;
   padding-left: 20px;
-  padding-right:50px;  
-
+  padding-right: 50px;
 }
-.submit{
- padding: 2px 2px;
- margin-left: 2px;
- font-size: 17px;
+.submit {
+  padding: 2px 2px;
+  margin-left: 2px;
+  font-size: 17px;
 }
-.term{
+.term {
   font-size: small;
   padding-top: 10px;
   padding-left: 1px;
@@ -38,35 +35,33 @@ input[type="password"],input[type="text"]
   padding-bottom: 10px;
   margin-bottom: 2px;
   margin-right: -4px;
-  
 }
-.submit{
+.submit {
   margin-left: 45px;
-  padding-left:38px;
+  padding-left: 38px;
   padding-right: -100px;
   font-size: large;
 }
-.login{
+.login {
   margin-left: -9px;
   background-color: gold;
   padding: 5px 5px 5px 5px;
 }
-.account{
+.account {
   position: relative;
   bottom: 110px;
   left: 700px;
   font-size: 17px;
-  padding: 3px 110px 3px 110px ;
+  padding: 3px 110px 3px 110px;
 }
-#tag{
+#tag {
   position: relative;
   bottom: 95px;
   left: 700px;
   color: black;
   font-size: medium;
 }
-#amazon_logo{
- margin-left: 860px;
- margin-bottom: -100px
+#amazon_logo {
+  margin-left: 860px;
+  margin-bottom: -100px;
 }
-
