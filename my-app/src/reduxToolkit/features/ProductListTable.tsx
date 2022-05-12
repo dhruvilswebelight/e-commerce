@@ -65,19 +65,17 @@
 // };
 // export default ProductList;
 
-                                                              // Using Custom Hook wip
+                                                            // Using Custom Hook 
 
-import { productDeleted } from "./productsSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 import { Link } from "react-router-dom";
+import useCustom from "./useAddDelete";
 const ProductList = () => {
-  const dispatch = useDispatch();
+
+  const { handleDelete } = useCustom();
 
   const { entities } = useSelector((state: any) => state.products);
-  const handleDelete = (id: any) => {
-    dispatch(productDeleted({ id }));
-  };
 
   return (
     <div>

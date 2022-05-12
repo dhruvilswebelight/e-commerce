@@ -94,7 +94,7 @@
 
 // export default productsSlice.reducer;
 
-// Using Custom Hook wip
+                                // Using Custom Hook 
 
 import { createSlice } from "@reduxjs/toolkit";
 import moment from "moment";
@@ -132,7 +132,6 @@ const productsSlice = createSlice({
         edit: moment().format("MMMM Do YYYY, h:mm:ss a"),
       },
     ],
-    // loading: false,
   },
   reducers: {
     productAdded(state: any, action: any) {

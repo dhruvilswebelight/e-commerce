@@ -81,15 +81,13 @@
 // };
 // export default AddProduct;
 
- // Using Custom Hook wip
+                                                             // Using Custom Hook 
 
-import { useDispatch, useSelector } from "react-redux";
-import moment from "moment";
-
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { useState } from "react";
 import { productAdded } from "./productsSlice";
-import useCustom from "./CustomHook";
+import useCustom from "./useAddDelete";
+import moment from "moment";
 
 const AddProduct = () => {
   const dispatch = useDispatch();
@@ -100,28 +98,12 @@ const AddProduct = () => {
     price,
     status,
     edit,
-    error,
+    productsAmount,
     handleTitle,
     handlePrice,
     handleStatus,
     handleEdit,
   } = useCustom();
-
-  // const [title, setTitle] = useState("");
-  // const [price, setPrice] = useState("");
-  // const [status, setStatus] = useState("");
-  // const [edit, setEdit] = useState(moment().format("MMMM Do YYYY, h:mm:ss a"));
-
-  // const [error, setError] = useState(null);
-
-  // const handleTitle = (e: any) => setTitle(e.target.value);
-  // const handlePrice = (e: any) => setPrice(e.target.value);
-  // const handleStatus = (e: any) => setStatus(e.target.value);
-  // const handleEdit = (e: any) => setEdit(e.target.value);
-
-  const productsAmount = useSelector(
-    (state: any) => state.products.entities.length
-  );
 
   const handleClick = () => {
     if (title && price && status && edit) {
@@ -135,7 +117,6 @@ const AddProduct = () => {
         })
       );
 
-      // setError(null);
       history.push("/Crud-Page");
     } else {
       alert("fill all the data");
@@ -182,7 +163,6 @@ const AddProduct = () => {
         <label id="time" onChange={handleEdit}>
           {moment().format("MMMM Do YYYY, h:mm:ss a")}
         </label>
-        {error && error}
         <button onClick={handleClick} id="toolkit_add_edit_product_button">
           Add product
         </button>
