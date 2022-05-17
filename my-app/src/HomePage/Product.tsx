@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Header from "./Header";
-import logo from "../icons8-search.svg";
+import logo from "../image/icons8-search.svg";
 import "./Header.css";
 
 const Product = () => {

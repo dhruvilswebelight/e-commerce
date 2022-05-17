@@ -70,7 +70,7 @@
 import { useSelector } from "react-redux";
 
 import { Link } from "react-router-dom";
-import useCustom from "./useAddDelete";
+import useCustom from "../customHook/useAddDelete";
 const ProductList = () => {
 
   const { handleDelete } = useCustom();

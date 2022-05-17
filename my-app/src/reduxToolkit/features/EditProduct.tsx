@@ -88,9 +88,9 @@
 
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { productUpdated } from "./productsSlice";
+import { productUpdated } from "../slice/productsSlice";
 import moment from "moment";
-import useEdit from "./useEdit";
+import useEdit from "../customHook/useEdit";
 
 const EditProduct = () => {
   const dispatch = useDispatch();

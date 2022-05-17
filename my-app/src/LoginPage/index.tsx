@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import logo from "../image/amazon-ar21.svg";
 import { useHistory } from "react-router-dom";
 

@@ -1,6 +1,6 @@
 import moment from "moment";
 import { useState } from "react";
-import { productDeleted } from "./productsSlice";
+import { productDeleted } from "../slice/productsSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const useCustom = () => {

@@ -7,18 +7,20 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 
-import Product from "./Product";
-import ProductDetail from "./productDetail";
-import LoginPage from "../LoginPage";
+import Product from "../Product";
+import ProductDetail from "../productDetail";
+import LoginPage from "../../LoginPage";
 // import Crud from "./Redux/Crud";
-import AddProduct from "../reduxToolkit/features/AddProduct";
-import EditProduct from "../reduxToolkit/features/EditProduct";
-import ProductList from "../reduxToolkit/features/ProductListTable";
+// import AddProduct from "../../reduxToolkit/features/AddProduct";
+// import EditProduct from "../../reduxToolkit/features/EditProduct";
+// import ProductList from "../../reduxToolkit/features/ProductListTable";
 
-import "../reduxToolkit/features/location.css";
-import "./Product.css";
-import "./Header.css";
-import "./AddDelete.css";
+import Crud from "../crud/feature/AddDelete";
+import "../../reduxToolkit/reduxToolkitCss/location.css";
+import ".././crud/crudCss/AddDelete.css";
+import "../Product.css";
+import "../Header.css";
+
 // import Navbar from "../Redux/Components/Navbar";
 // import Nav from "../Redux/Components/Nav";
 const Homepage = () => {
@@ -40,11 +42,11 @@ const Homepage = () => {
         <Navbar />
       </Route> */}
 
-      {/* <Route path="/Crud-Page"> 
+      <Route path="/Crud-Page"> 
       <Crud />
-       </Route> */}
+       </Route>
 
-      <Route path="/Crud-Page">
+      {/* <Route path="/Crud-Page">
         <ProductList />
       </Route>
       <Route path="/add-product">
@@ -52,7 +54,7 @@ const Homepage = () => {
       </Route>
       <Route path="/edit-product">
         <EditProduct />
-      </Route>
+      </Route> */}
     </div>
   );
 };
